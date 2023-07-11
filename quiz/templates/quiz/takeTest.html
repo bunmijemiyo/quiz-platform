@@ -1,0 +1,25 @@
+<!-- take_test.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Take Test</title>
+  </head>
+  <body>
+    <form method="post">
+      {% csrf_token %} {% for question in questions %}
+      <h3>{{ question.text }}</h3>
+      {% for choice in question.answerchoice_set.all %}
+      <input
+        type="radio"
+        name="question_{{ question.id }}"
+        value="{{ choice.id }}"
+      />
+      {{ choice.text }}<br />
+      {% endfor %}
+      <hr />
+      {% endfor %}
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

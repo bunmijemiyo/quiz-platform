@@ -1,0 +1,15 @@
+create choice
+{
+    "id": 13,
+    "choice": "a",
+    "text": "Yenogua",
+    "is_correct": true,
+    "question": 4
+}
+
+
+create question
+{
+    "id": 3,
+    "text": "What is the capital of Ondo?"
+}

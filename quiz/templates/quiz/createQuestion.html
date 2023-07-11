@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Question</title>
+  </head>
+  <body>
+    <h1>Create Question</h1>
+    <form method="post">
+      {% csrf_token %} {{ question_form.as_p }} {{ formset.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

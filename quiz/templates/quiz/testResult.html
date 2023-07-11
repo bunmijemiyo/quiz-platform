@@ -1,0 +1,14 @@
+<!-- test_result.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Result</title>
+  </head>
+  <body>
+    <h1><a href="{% url 'takeTest' %}"> Take Test Again</a> <a href="{% url 'create' %}"> Create Test</a></h1>
+    <h2>Test Result </h2>
+    <p>Your score: {{ score }} / {{ total_questions }}</p>
+    <p>Percentage score: {{ percentage_score }}%</p>
+  </body>
+</html>

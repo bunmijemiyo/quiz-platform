@@ -1,0 +1,23 @@
+<!-- display_questions.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Questions</title>
+  </head>
+  <body>
+    <h1>Questions and Answers <a href="{% url 'create' %}"> Create</a></h1>
+    <ul>
+      {% for question in questions %}
+      <li>
+        <strong>{{ question.text }}</strong>
+        <ul>
+          {% for choice in question.answerchoice_set.all %}
+          <li>{{ choice.get_choice_display }} - {{ choice.text }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
